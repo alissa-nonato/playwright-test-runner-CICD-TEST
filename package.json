@@ -1,0 +1,16 @@
+{
+  "name": "playwright-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "playwright test --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.13.1",
+    "playwright": "^1.13.1"
+  }
+}
