@@ -17,7 +17,7 @@ const config: PlaywrightTestConfig = {
         //headless: false,
         //viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
-        //video: 'on-first-retry',
+        video: 'on',
         //trace: 'on-first-retry',
         //screenshot: 'only-on-failure',
         bypassCSP: true,
@@ -26,7 +26,7 @@ const config: PlaywrightTestConfig = {
         },
     },
     reporter: [
-        //['list'],
+        ['list'],
         //['json', {  outputFile: 'test-results/test-results.json' }]
     ],
     projects: [
