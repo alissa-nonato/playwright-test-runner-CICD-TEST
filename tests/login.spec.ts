@@ -6,7 +6,7 @@ import { URL, AUTOMATION_OBJS } from '../support/const_objects';
 import { Login } from '../classes/login.class';
 
 // Use fixture
-test.use({baseURL: URL.PRODIGY_FEATURE_BRANCH});
+test.use({baseURL: URL.PRODIGY_PROD});
 
 test.describe('Log in from home', () => {
     test('should log in', async ({page, baseURL, user, pass, contextOptions}) => {
@@ -15,8 +15,9 @@ test.describe('Log in from home', () => {
         const login = new Login(page);
         await login.initalLogin(baseURL!, user, pass, contextOptions);
         
-        const screen: string = await getObjProperty(page, 'key', AUTOMATION_OBJS.CHAR_SEL_SCREEN);
-        expect(screen).toStrictEqual(AUTOMATION_OBJS.CHAR_SEL_SCREEN);
+        expect(await page.title()).toContain('Play Prodigy');
+        //const screen: string = await getObjProperty(page, 'key', AUTOMATION_OBJS.CHAR_SEL_SCREEN);
+        //expect(screen).toStrictEqual(AUTOMATION_OBJS.CHAR_SEL_SCREEN);
         await page.waitForTimeout(2000);
     });
 
