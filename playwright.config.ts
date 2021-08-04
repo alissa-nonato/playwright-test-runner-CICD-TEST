@@ -4,29 +4,29 @@ import { LoginFixture } from './fixtures/login.fixture';
 const config: PlaywrightTestConfig = {
     // Look for test files in the "tests" directory, relative to this configuration file
     testDir: 'tests',
-    outputDir: 'test-results',
+    //outputDir: 'test-results',
     // Each test is given 60 seconds
-    timeout: 300000,
+    timeout: 60000,
     // Forbid test.only on CI
     forbidOnly: !!process.env.CI,
     // 30 retries for each test
-    retries: 3,
+    //retries: 3,
     // Limit the number of workers on CI, use default locally
     workers: process.env.CI ? 2 : 5,
     use: {
         //headless: false,
         //viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
-        video: 'on-first-retry',
-        trace: 'on-first-retry',
-        screenshot: 'only-on-failure',
+        //video: 'on-first-retry',
+        //trace: 'on-first-retry',
+        //screenshot: 'only-on-failure',
         bypassCSP: true,
         launchOptions: {
             slowMo: 100,
         },
     },
     reporter: [
-        ['list'],
+        //['list'],
         //['json', {  outputFile: 'test-results/test-results.json' }]
     ],
     projects: [
