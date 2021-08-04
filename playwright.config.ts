@@ -19,7 +19,7 @@ const config: PlaywrightTestConfig = {
         ignoreHTTPSErrors: true,
         video: 'on',
         //trace: 'on-first-retry',
-        //screenshot: 'only-on-failure',
+        screenshot: 'on',
         bypassCSP: true,
         launchOptions: {
             slowMo: 100,
