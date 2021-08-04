@@ -1,6 +1,5 @@
 # PlaywrightTestRunner_CICD_Test
-This repo contains the Playwright CI/CD operation with GitHub Actions.
-
+This repo contains the Playwright CI/CD operation with GitHub Actions.<br><br>
 
 ## To run this on your own machine:
 
