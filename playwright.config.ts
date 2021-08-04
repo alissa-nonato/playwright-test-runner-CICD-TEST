@@ -14,7 +14,7 @@ const config: PlaywrightTestConfig = {
     // Limit the number of workers on CI, use default locally
     workers: process.env.CI ? 2 : 5,
     use: {
-        headless: false,
+        //headless: false,
         //viewport: { width: 1280, height: 720 },
         ignoreHTTPSErrors: true,
         video: 'on-first-retry',
