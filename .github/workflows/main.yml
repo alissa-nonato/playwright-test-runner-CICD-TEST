@@ -30,3 +30,9 @@ jobs:
 
       - name: Install dependencies and run tests
         run: npm install && npx playwright test --project=chromium
+      
+      - uses: actions/upload-artifact@v2
+        if: ${{ always() }}
+        with:
+          name: test-artifacts
+          path: test-results
